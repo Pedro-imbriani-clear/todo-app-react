@@ -14,6 +14,7 @@ export default props => {
                     onClick={() => props.handleMarkAsPending(todo)}></IconButton>
                     <IconButton style='danger' icon='trash-o'hide={!todo.done}
                         onClick={() => props.handleRemove(todo)}></IconButton>
+                 
                 </td>
             </tr>
         ))
@@ -23,7 +24,7 @@ export default props => {
             <thead>
                 <tr>
                     <th>Descriçao</th>
-                    <th>Açoes</th>
+                    <th className="tableActions">Açoes</th>
                 </tr>
             </thead>
             <tbody>
