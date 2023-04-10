@@ -61,8 +61,10 @@ class TodoForm extends Component {
         )
     }
 }
-const mapStateToprops = state => ({ description: state.todo.description })
+const mapStateToprops = state => 
+({ description: state.todo.description })
 
-const mapDispatchToprops = dispatch => bindActionCreators({ add, changeDescription, search }, dispatch)
+const mapDispatchToprops = dispatch =>
+ bindActionCreators({ add, changeDescription, search }, dispatch)
 
 export default connect(mapStateToprops, mapDispatchToprops)(TodoForm)
