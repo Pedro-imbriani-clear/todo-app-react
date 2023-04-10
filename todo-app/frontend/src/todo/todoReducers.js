@@ -1,4 +1,4 @@
-const INITIAL_STATE = {description: '',  list: [] }
+const INITIAL_STATE = {description: '',list: [] }
 
 export default (state = INITIAL_STATE, action) => {
     switch(action.type){
@@ -8,9 +8,11 @@ export default (state = INITIAL_STATE, action) => {
         case 'TODO_SEARCHED':
             return {...state, list: action.payload.data}
 
-        case 'TUDO_ADDED':
-            return {...state, description: ''}
+            case 'TUDO_ADDED':
+                case 'TODO_CLEAR':
+                return {...state, description: ''}
         
+
         default:
             return state
     }
